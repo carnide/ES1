@@ -16,3 +16,4 @@ public interface Repositorio { /*porque o repositorio não liga a nada*/
      void	adicionaPropostaRequisicao(PropostaAquisicao proposta);
      void	adicionaRequisicaoCompra(RequisicaoCompra requisicaoCompra);
 }
+ 
