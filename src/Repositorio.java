@@ -11,9 +11,13 @@ public interface Repositorio { /*porque o repositorio não liga a nada*/
      void adicionaDevolucao(Devolucao devolucao);
      void adicionaCoima(Coima coima);
      Emprestimo devolveEmprestimoDaRequisicao(Requisicao r);
-     void	adicionaEncomenda(Encomenda encomenda);
-     void	adicionaEntradaNovoLivro(EntradaNovoLivro entradaNovoLivro);
-     void	adicionaPropostaRequisicao(PropostaAquisicao proposta);
-     void	adicionaRequisicaoCompra(RequisicaoCompra requisicaoCompra);
+     void adicionaEncomenda(Encomenda encomenda);
+     void adicionaEntradaNovoLivro(EntradaNovoLivro entradaNovoLivro);
+     void adicionaPropostaRequisicao(PropostaAquisicao proposta);
+     void adicionaRequisicaoCompra(RequisicaoCompra requisicaoCompra);
+
+     void adicionaAssistentePesquisa(Assistente_Pesquisa assistente_pesquisa);
+     void adicionaMarcacaoAssistencia(Marcacao_Assistencia marcacao_assistencia);
+     void adicionaPesquisa (Pesquisa pesquisa);
 }
  

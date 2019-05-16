@@ -4,16 +4,16 @@ import java.sql.Time;
 public class Marcacao_Assistencia {
     private String Descricao;
     private Utilizador User;
-    //private String Data;
     private Date Data;
-    //private String Hora;
-    private Time Hora;
+    private Time Hora; //hora de inicio
+    private int Duration; //duracao da reserva
 
-    public Marcacao_Assistencia(String descricao, Utilizador user, Date data, Time hora) {
+    public Marcacao_Assistencia(String descricao, Utilizador user, Date data, Time hora, int duration) {
         Descricao = descricao;
         User = user;
         Data = data;
         Hora = hora;
+        Duration = duration;
     }
 
     public String getDescricao() {
@@ -48,5 +48,12 @@ public class Marcacao_Assistencia {
         Hora = hora;
     }
 
+    public int getDuration() {
+        return Duration;
+    }
+
+    public void setDuration(int duration) {
+        Duration = duration;
+    }
 
 }

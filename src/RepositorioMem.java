@@ -15,6 +15,10 @@ public class RepositorioMem implements Repositorio{
     private ArrayList<PropostaAquisicao> PROPOSTAAQUISICAO;
     private ArrayList<RequisicaoCompra> REQUISICAOCOMPRA;
 
+    private ArrayList<Assistente_Pesquisa> ASSISTENTE;
+    private ArrayList<Marcacao_Assistencia> MARCACAO;
+    private ArrayList<Pesquisa> PESQUISA;
+
     public RepositorioMem(){
         UTILIZADOR = new ArrayList<>();
         TIPO = new ArrayList<>();
@@ -29,6 +33,10 @@ public class RepositorioMem implements Repositorio{
         ENTRADANOVOLIVRO = new ArrayList<>();
         PROPOSTAAQUISICAO = new ArrayList<>();
         REQUISICAOCOMPRA = new ArrayList<>();
+
+        ASSISTENTE = new ArrayList<>();
+        MARCACAO = new ArrayList<>();
+        PESQUISA = new ArrayList<>();
     }
 
     public void adicionaUtilizador(Utilizador utilizador) {
@@ -85,6 +93,12 @@ public class RepositorioMem implements Repositorio{
     public void	adicionaRequisicaoCompra(RequisicaoCompra requisicaoCompra){ REQUISICAOCOMPRA.add(requisicaoCompra);}
 
 
+
+    public void adicionaAssistentePesquisa(Assistente_Pesquisa assistente_pesquisa){ASSISTENTE.add(assistente_pesquisa);}
+
+    public void adicionaMarcacaoAssistencia(Marcacao_Assistencia marcacao_assistencia){MARCACAO.add(marcacao_assistencia);}
+
+    public void adicionaPesquisa (Pesquisa pesquisa){PESQUISA.add(pesquisa);}
 
 
 }
