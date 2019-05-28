@@ -6,6 +6,7 @@ public class Armazenamento {
     private String Descricao;
     private Utilizador User;
     private Date Data;  //data de edicao
+    private Time Hora;  //hora de edicao
 
     public Armazenamento(String descricao, Utilizador user, Date data, Time hora) {
         Descricao = descricao;
@@ -46,6 +47,5 @@ public class Armazenamento {
         Hora = hora;
     }
 
-    private Time Hora;  //hora de edicao
 
 }
