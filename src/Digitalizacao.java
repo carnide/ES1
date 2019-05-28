@@ -1,23 +1,13 @@
 import java.sql.Date;
+import java.sql.Time;
 
-public class Digitalizacao {
+public class Digitalizacao extends Armazenamento{
 
-    private String Descricao;
     private int ID;
-    private Date Data;  //data de adicao
 
-    public Digitalizacao(String descricao, int ID, Date data) {
-        Descricao = descricao;
+    public Digitalizacao(String descricao, Utilizador user, Date data, Time hora, int ID) {
+        super(descricao, user, data, hora);
         this.ID = ID;
-        Data = data;
-    }
-
-    public String getDescricao() {
-        return Descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        Descricao = descricao;
     }
 
     public int getID() {
@@ -26,13 +16,5 @@ public class Digitalizacao {
 
     public void setID(int ID) {
         this.ID = ID;
-    }
-
-    public Date getData() {
-        return Data;
-    }
-
-    public void setData(Date data) {
-        Data = data;
     }
 }
