@@ -1,3 +1,6 @@
+import sun.rmi.transport.LiveRef;
+
+import java.security.PrivateKey;
 import java.util.ArrayList; // import the ArrayList class
 
 public class RepositorioMem implements Repositorio{
@@ -15,9 +18,11 @@ public class RepositorioMem implements Repositorio{
     private ArrayList<PropostaAquisicao> PROPOSTAAQUISICAO;
     private ArrayList<RequisicaoCompra> REQUISICAOCOMPRA;
 
-    private ArrayList<Assistente_Pesquisa> ASSISTENTE;
-    private ArrayList<Marcacao_Assistencia> MARCACAO;
-    private ArrayList<Pesquisa> PESQUISA;
+    private ArrayList<Armazenamento> ARMAZENAMENTO;
+    private ArrayList<Digitalizacao> DIGITALIZACAO;
+    private ArrayList<Permissoes> PERMISSOES;
+    private ArrayList<LivroDanificado> LIVRODANIFICADO;
+    private ArrayList<ImpressaoLivro> IMPRESSAOLIVRO;
 
     public RepositorioMem(){
         UTILIZADOR = new ArrayList<>();
@@ -34,9 +39,11 @@ public class RepositorioMem implements Repositorio{
         PROPOSTAAQUISICAO = new ArrayList<>();
         REQUISICAOCOMPRA = new ArrayList<>();
 
-        ASSISTENTE = new ArrayList<>();
-        MARCACAO = new ArrayList<>();
-        PESQUISA = new ArrayList<>();
+        ARMAZENAMENTO = new ArrayList<>();
+        DIGITALIZACAO = new ArrayList<>();
+        PERMISSOES = new ArrayList<>();
+        LIVRODANIFICADO = new ArrayList<>();
+        IMPRESSAOLIVRO = new ArrayList<>();
     }
 
     public void adicionaUtilizador(Utilizador utilizador) {
@@ -93,12 +100,28 @@ public class RepositorioMem implements Repositorio{
     public void	adicionaRequisicaoCompra(RequisicaoCompra requisicaoCompra){ REQUISICAOCOMPRA.add(requisicaoCompra);}
 
 
+    public void adicionaArmazenamento(Armazenamento armazenamento){
+        ARMAZENAMENTO.add(armazenamento);
+    }
 
-    public void adicionaAssistentePesquisa(Assistente_Pesquisa assistente_pesquisa){ASSISTENTE.add(assistente_pesquisa);}
+    public void adicionaDigitalizacao( Digitalizacao digitalizacao){
+        DIGITALIZACAO.add(digitalizacao);
+    }
 
-    public void adicionaMarcacaoAssistencia(Marcacao_Assistencia marcacao_assistencia){MARCACAO.add(marcacao_assistencia);}
+    public void adicionaPermissao(Permissoes permissoes){
+        PERMISSOES.add(permissoes);
+    }
 
-    public void adicionaPesquisa (Pesquisa pesquisa){PESQUISA.add(pesquisa);}
+    public void adicionaLivroDanificado(LivroDanificado livroDanificado){
+        LIVRODANIFICADO.add(livroDanificado);
+    }
+
+    public void adicionaImpressaoLivro(ImpressaoLivro impressaoLivro){
+        IMPRESSAOLIVRO.add(impressaoLivro);
+    }
+
+
+
 
 
 }
