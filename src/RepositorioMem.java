@@ -108,7 +108,7 @@ public class RepositorioMem implements Repositorio{
         DIGITALIZACAO.add(digitalizacao);
     }
 
-    public void adicionaPermissao(Permissoes permissoes){
+    public void adicionaPermissoes(Permissoes permissoes){
         PERMISSOES.add(permissoes);
     }
 

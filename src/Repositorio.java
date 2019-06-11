@@ -17,7 +17,7 @@ public interface Repositorio { /*porque o repositorio não liga a nada*/
      void adicionaRequisicaoCompra(RequisicaoCompra requisicaoCompra);
 
      void adicionaDigitalizacao(Digitalizacao digitalizacao);
-     void adicionaArmazinamento(Armazenamento armazenamento);
+     void adicionaArmazenamento(Armazenamento armazenamento);
      void adicionaImpressaoLivro(ImpressaoLivro impressaoLivro);
      void adicionaLivroDanificado(LivroDanificado livroDanificado);
      void adicionaPermissoes(Permissoes permissoes);
