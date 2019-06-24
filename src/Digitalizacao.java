@@ -1,14 +1,27 @@
 import java.sql.Date;
 import java.sql.Time;
 
-public class Digitalizacao extends Armazenamento{
+public class Digitalizacao{
 
     private int ID;
+    private LivroDanificado livro;
 
-    public Digitalizacao(String descricao, Utilizador user, Date data, Time hora, int ID) {
-        super(descricao, user, data, hora);
+
+
+    public Digitalizacao(int ID, LivroDanificado livro) {
         this.ID = ID;
+        this.livro = livro;
     }
+
+    public Livro getLivro() {
+        return livro;
+    }
+
+    public void setLivro(LivroDanificado livro) {
+        this.livro = livro;
+    }
+
+
 
     public int getID() {
         return ID;

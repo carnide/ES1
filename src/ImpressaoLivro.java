@@ -3,37 +3,31 @@ import java.sql.Time;
 
 public class ImpressaoLivro {
 
-    private int n_impressora;
-    private Date Data;
-    private Time Hora;
+    private int n_impressao;
+    private Livro livro;
 
-    public ImpressaoLivro(int n_impressora, Date data, Time hora) {
-        this.n_impressora = n_impressora;
-        Data = data;
-        Hora = hora;
+
+    public ImpressaoLivro(int n_impressao, Livro livro) {
+        this.n_impressao = n_impressao;
+        this.livro = livro;
+
     }
 
-    public int getN_impressora() {
-        return n_impressora;
+    public int getN_impressao() {
+        return n_impressao;
     }
 
-    public void setN_impressora(int n_impressora) {
-        this.n_impressora = n_impressora;
+    public void setN_impressao(int n_impressao) {
+        this.n_impressao = n_impressao;
     }
 
-    public Date getData() {
-        return Data;
+    public Livro getLivro() {
+        return livro;
     }
 
-    public void setData(Date data) {
-        Data = data;
+    public void setLivro(Livro livro) {
+        this.livro = livro;
     }
 
-    public Time getHora() {
-        return Hora;
-    }
 
-    public void setHora(Time hora) {
-        Hora = hora;
-    }
 }

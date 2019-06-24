@@ -8,6 +8,7 @@ public class Utilizador {
         this.nome = nome;
         this.estado = estado;
         this.IDUtilizador = IDUtilizador;
+        this.tipo = tipo;
     }
 
     public String getNome() {

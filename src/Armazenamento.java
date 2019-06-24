@@ -1,18 +1,17 @@
 import java.sql.Date;
 import java.sql.Time;
+import java.util.ArrayList;
 
 public class Armazenamento {
 
+    private ArrayList<Digitalizacao> ldigit ;
     private String Descricao;
-    private Utilizador User;
-    private Date Data;  //data de edicao
-    private Time Hora;  //hora de edicao
 
-    public Armazenamento(String descricao, Utilizador user, Date data, Time hora) {
+
+    public Armazenamento(String descricao) {
+       ldigit = new ArrayList<>();
         Descricao = descricao;
-        User = user;
-        Data = data;
-        Hora = hora;
+
     }
 
     public String getDescricao() {
@@ -23,29 +22,13 @@ public class Armazenamento {
         Descricao = descricao;
     }
 
-    public Utilizador getUser() {
-        return User;
+
+    public ArrayList<Digitalizacao> getLdigit() {
+        return ldigit;
     }
 
-    public void setUser(Utilizador user) {
-        User = user;
-    }
-
-    public Date getData() {
-        return Data;
-    }
-
-    public void setData(Date data) {
-        Data = data;
-    }
-
-    public Time getHora() {
-        return Hora;
-    }
-
-    public void setHora(Time hora) {
-        Hora = hora;
-    }
-
+    public void addDigitalizacao(Digitalizacao digiy){
+        ldigit.add(digiy);
+}
 
 }
