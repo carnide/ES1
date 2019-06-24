@@ -1,0 +1,108 @@
+Index: src/RepositorioMem.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/RepositorioMem.java	(revision 54c85e7fcb5340170dfa98c02ab69712a7988c5b)
++++ src/RepositorioMem.java	(date 1558025022540)
+@@ -15,6 +15,10 @@
+     private ArrayList<PropostaAquisicao> PROPOSTAAQUISICAO;
+     private ArrayList<RequisicaoCompra> REQUISICAOCOMPRA;
+ 
++    private ArrayList<Assistente_Pesquisa> ASSISTENTE;
++    private ArrayList<Marcacao_Assistencia> MARCACAO;
++    private ArrayList<Pesquisa> PESQUISA;
++
+     public RepositorioMem(){
+         UTILIZADOR = new ArrayList<>();
+         TIPO = new ArrayList<>();
+@@ -29,6 +33,10 @@
+         ENTRADANOVOLIVRO = new ArrayList<>();
+         PROPOSTAAQUISICAO = new ArrayList<>();
+         REQUISICAOCOMPRA = new ArrayList<>();
++
++        ASSISTENTE = new ArrayList<>();
++        MARCACAO = new ArrayList<>();
++        PESQUISA = new ArrayList<>();
+     }
+ 
+     public void adicionaUtilizador(Utilizador utilizador) {
+@@ -86,5 +94,11 @@
+ 
+ 
+ 
++    public void adicionaAssistentePesquisa(Assistente_Pesquisa assistente_pesquisa){ASSISTENTE.add(assistente_pesquisa);}
++
++    public void adicionaMarcacaoAssistencia(Marcacao_Assistencia marcacao_assistencia){MARCACAO.add(marcacao_assistencia);}
++
++    public void adicionaPesquisa (Pesquisa pesquisa){PESQUISA.add(pesquisa);}
++
+ 
+ }
+Index: src/Marcacao_Assistencia.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Marcacao_Assistencia.java	(revision 54c85e7fcb5340170dfa98c02ab69712a7988c5b)
++++ src/Marcacao_Assistencia.java	(date 1558025022497)
+@@ -4,16 +4,16 @@
+ public class Marcacao_Assistencia {
+     private String Descricao;
+     private Utilizador User;
+-    //private String Data;
+     private Date Data;
+-    //private String Hora;
+-    private Time Hora;
++    private Time Hora; //hora de inicio
++    private int Duration; //duracao da reserva
+ 
+-    public Marcacao_Assistencia(String descricao, Utilizador user, Date data, Time hora) {
++    public Marcacao_Assistencia(String descricao, Utilizador user, Date data, Time hora, int duration) {
+         Descricao = descricao;
+         User = user;
+         Data = data;
+         Hora = hora;
++        Duration = duration;
+     }
+ 
+     public String getDescricao() {
+@@ -48,5 +48,12 @@
+         Hora = hora;
+     }
+ 
++    public int getDuration() {
++        return Duration;
++    }
++
++    public void setDuration(int duration) {
++        Duration = duration;
++    }
+ 
+ }
+Index: src/Repositorio.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Repositorio.java	(revision 54c85e7fcb5340170dfa98c02ab69712a7988c5b)
++++ src/Repositorio.java	(date 1558025022517)
+@@ -11,9 +11,13 @@
+      void adicionaDevolucao(Devolucao devolucao);
+      void adicionaCoima(Coima coima);
+      Emprestimo devolveEmprestimoDaRequisicao(Requisicao r);
+-     void	adicionaEncomenda(Encomenda encomenda);
+-     void	adicionaEntradaNovoLivro(EntradaNovoLivro entradaNovoLivro);
+-     void	adicionaPropostaRequisicao(PropostaAquisicao proposta);
+-     void	adicionaRequisicaoCompra(RequisicaoCompra requisicaoCompra);
++     void adicionaEncomenda(Encomenda encomenda);
++     void adicionaEntradaNovoLivro(EntradaNovoLivro entradaNovoLivro);
++     void adicionaPropostaRequisicao(PropostaAquisicao proposta);
++     void adicionaRequisicaoCompra(RequisicaoCompra requisicaoCompra);
++
++     void adicionaAssistentePesquisa(Assistente_Pesquisa assistente_pesquisa);
++     void adicionaMarcacaoAssistencia(Marcacao_Assistencia marcacao_assistencia);
++     void adicionaPesquisa (Pesquisa pesquisa);
+ }
+  
+\ No newline at end of file
